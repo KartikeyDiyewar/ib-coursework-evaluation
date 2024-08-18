@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+IB-CourseWork-Evaluation
+A web application built with Next.js, Tailwind CSS, and ShadcnUI that allows users to upload, view, and filter coursework PDFs.
 
-## Getting Started
+Table of Contents
+Setup Instructions
+Assumptions and Design Decisions
+Implemented Features
+Challenges and Solutions
 
-First, run the development server:
+\*Setup Instructions
 
-```bash
+Clone the repository:
+
+git clone https://github.com/KartikeyDiyewar/ib-coursework-evaluation.git
+cd ProjectName
+Install dependencies:
+
+Run the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the application in your browser:
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+\*Assumptions and Design Decisions
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Assumptions:
 
-## Learn More
+Users will primarily use this application to upload and manage coursework PDFs.
+The user needs to add PDF files to the application for testing and viewing the features.
+The application assumes that the user has modern browsers that support the latest JavaScript features.
 
-To learn more about Next.js, take a look at the following resources:
+Design Decisions:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Next.js was chosen for its server-side rendering capabilities and ease of use with React.
+Tailwind CSS was used for quick styling and responsive design.
+ShadcnUI was integrated for consistent UI components.
+Zustand was selected for state management due to its simplicity and minimalistic API.
+State is stored in local storage to persist user data across sessions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+\*Implemented Features
 
-## Deploy on Vercel
+Home Page:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+File upload functionality using React Dropzone.
+Displays a list of uploaded coursework.
+Filters coursework based on certain criteria.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Coursework PDF View Page:
+
+Displays the selected coursework PDF using React-PDF.
+
+State Management:
+
+Zustand is used for managing the application state.
+State is persisted in local storage to maintain data across sessions.
+
+\*Challenges and Solutions
+
+File Upload and State Management:
+
+Challenge: Integrating file upload and managing the state across different components.
+Solution: Used Zustand for efficient state management and React Dropzone for handling file uploads.
+PDF Viewing:
+
+Challenge: Displaying the uploaded PDFs correctly on different devices and browsers.
+Solution: Integrated React-PDF, which supports PDF rendering in a React environment, ensuring compatibility.
